@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../fonts/Minecrafter-MA3Dw.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Minecraft1';
+    src: url('../fonts/MinecraftTen-VGORe.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Minecraft2';
+    src: url('../fonts/Minecraftchmc-dBlX.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+
+    --font-color: #c9c9c9;
+    --header-height: 13rem;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: gradientShift 5s ease infinite;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+#mainContainer .container {
+    display: none;
+}
+
+#mainContainer .selected {
+    display: unset;
+}
+
+#mainContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    /* Agora cobre a altura total da tela */
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+    /* Certifica-se de que fique atrás de outros conteúdos */
+}
+
+header {
+    width: 100%;
+    top: 0;
+    height: var(--header-height);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background: rgb(37, 37, 37);
+    padding: 1.5rem;
+    box-shadow: 0 .25rem .25rem 0 rgba(0, 0, 0, .7);
+    z-index: 2;
+}
+
+.titleHeader {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-family: 'Minecraft1', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+nav li {
+    display: flex;
+    min-width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    transition: all ease 1s;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    height: fit-content;
+    padding: 1.25rem;
+    text-align: center;
+    border-radius: 50rem;
+    box-shadow: 0 .25rem .25rem 0 rgba(0, 0, 0, 0.5);
+    text-shadow: .15rem .15rem .18rem rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+nav a:hover {
+    position: relative;
+    animation: hoverAnimation .25s ease forwards;
+    transition: all ease .5s;
+    border-radius: 1.5rem 1.5rem 0 0;
+    background: rgb(0, 128, 0, .15);
+    border-bottom: solid green .15rem;
+}
+
+#playButton {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    font-size: 1.4rem;
+}
+
+h1,
+h2 {
+    text-shadow: .15rem .15rem .18rem rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+a,
+p {
+    font-size: 1.25rem;
+}
+
+h1,
+h2,
+a,
+p {
+    color: var(--font-color);
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 .25rem .25rem 0 rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+.mainIp {
+    margin-top: var(--header-height);
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 .25rem .25rem 0 rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+.mainIp h2,
+#buttonIp p {
+    font-family: 'Minecraft', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.mainIp h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    max-width: 60rem;
+}
+
+.mainIp h2 span {
+    color: red;
+    font-size: .8rem;
+    background-color: rgb(63, 0, 0);
+    padding: .25rem;
+    max-width: 20rem;
+    margin: 0;
+}
+
+.mainIp h2 .spanBold {
+    font-weight: bold;
+    background: none;
+    font-size: .85rem;
+}
+
+#buttonIp {
+    color: var(--font-color);
+    display: flex;
+    text-decoration: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background: rgb(255, 255, 255, .25);
+    border-radius: 1rem;
+    width: fit-content;
+    padding: 1rem;
+    gap: .5rem;
+    transition: all .5s ease;
+}
+
+#buttonIp:hover {
+    background: rgb(255, 255, 255, .35);
+    transition: all .5s ease;
+}
+
+#buttonIp img {
+    position: relative;
+    width: 1.5rem;
+    height: auto;
+    animation: fadeIn 2s ease infinite;
+}
+
+.containerBannner {
+    width: 25rem;
+    height: auto;
+}
+
+.containerBannner img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    box-shadow: 0 .25rem .25rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.contentPlayers {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.containerPlayers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: .75rem;
+}
+
+.playerCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.playerCard p,
+.playerCard h2 {
+    font-family: "Minecraft2";
+}
+
+.playerCard h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.loading {
+    color: var(--font-color);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.containerFooter {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerFooter img {
+    width: 2rem;
+    height: auto;
+}
+
+.containerFooter p {
+    text-align: center;
+    letter-spacing: .15rem;
+    font-family: 'Minecraft', sans-serif;
+    padding: .25rem;
+    border-bottom: dashed green .2rem;
+}
+
+.containerFooter ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    gap: .5rem;
+}
+
+.containerFooter ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+    text-decoration: none;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    font-size: 1rem;
+    transition: all .5s ease;
+}
+
+.containerFooter ul a:hover {
+    background: rgba(0, 0, 0, 0.85);
+    transition: all .5s ease;
+    position: relative;
+    animation: hoverAnimation .25s ease forwards;
+    border-bottom: solid green .15rem;
+}
+
+.containerFooter article {
+    color: var(--font-color);
+    text-align: justify;
+    letter-spacing: .05rem;
+    line-height: 1.05rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    padding: 2rem;
+    background: rgb(37, 37, 37);
+    gap: 2rem;
+}
+
+footer span {
+    color: var(--font-color);
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    border-radius: 0 1rem 0 1rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        /* Fora da tela (para cima) */
+        opacity: 0;
+        /* Invisível no início */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Posição original */
+        opacity: 1;
+        /* Visível */
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes hoverAnimation {
+    0% {
+        bottom: 0;
+        letter-spacing: normal;
+    }
+
+    50% {
+        bottom: .25rem;
+        /* Ajuste o valor conforme necessário */
+        letter-spacing: .05rem;
+    }
+
+    100% {
+        bottom: 0;
+        letter-spacing: .1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    a,
+    p {
+        font-size: .6rem;
+    }
+
+    .containerBannner {
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main h2 p {
+        font-size: .75rem;
+    }
+
+    .playerCard p {
+        font-size: 1rem;
+    }
+
+    .containerPlayers {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: .75rem;
+    }
+
+    .containerFooter {
+        flex-direction: column;
+    }
+
+    .containerFooter ul {
+        width: 100%;
+    }
+}
