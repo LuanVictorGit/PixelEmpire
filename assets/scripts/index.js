@@ -1,4 +1,58 @@
+let clickedIp = false;
+let selectedButton;
+
 document.addEventListener("DOMContentLoaded", async (e) => {
+    document.addEventListener("click", (e) => {
+        if ((e.target.id === "wikiButton" ||
+            e.target.id === "shopButton") && e.target !== selectedButton) {
+            e.preventDefault();
+            if (selectedButton) {
+                selectedButton.classList.remove("selectedButton");
+            }
+            selectedButton = e.target;
+            selectedButton.classList.add("selectedButton");
+
+            const container = document.getElementsByClassName("selected")[0];
+            container.classList.remove("selected");
+            switch (selectedButton.id) {
+                case "wikiButton":
+                    document.getElementsByClassName("container")[1].classList.add("selected");
+                    break;
+                case "shopButton":
+                    document.getElementsByClassName("container")[0].classList.add("selected");
+                    break;
+                default:
+                    break;
+            }
+
+            return;
+        }
+        if (e.target.id === "buttonIp") {
+            e.preventDefault();
+            const target = e.target.querySelector("p");
+            if (clickedIp) return;
+            clickedIp = true;
+            const elementText = target;
+            const texto = elementText.textContent;
+            navigator.clipboard.writeText(texto.replace('IP:', '')).then(() => {
+                elementText.textContent = 'copiado com sucesso!'
+                setTimeout(() => {
+                    elementText.textContent = texto;
+                    clickedIp = false;
+                }, 800);
+            }).catch((err) => {
+                elementText.textContent = 'erro ao copiar!!'
+                setTimeout(() => {
+                    elementText.textContent = texto;
+                    clickedIp = false;
+                }, 800);
+            });
+        }
+    });
+
+    selectedButton = document.getElementById("shopButton");
+    selectedButton.classList.add("selectedButton");
+
     await executeListPlayers(document.getElementsByClassName("containerPlayers")[0]);
 });
 

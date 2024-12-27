@@ -15,9 +15,8 @@
             <nav>
                 <h1 class="titleHeader">pixelempire</h1>
                 <ul>
-                    <li><a href="#" id="homeButton">sobre</a></li>
-                    <li><a href="#" id="playButton">jogar</a></li>
-                    <li><a href="#" id="shopButton">loja</a></li>
+                    <li><a href="#" id="wikiButton" class="button" title="selecionar a página sobre"><img src="../assets/imgs/pokemon-go.png" alt=""> wiki</a></li>
+                    <li><a href="#" id="shopButton" class="button" title="selecionar a página jogar"><img src="../assets/imgs/pokeball.png" alt=""> loja</a></li>
                 </ul>
             </nav>
         </header>
@@ -38,18 +37,30 @@
                 </div>
             </div>
             <div>
-                <div class="contentPlayers">
+                <div class="containerShop mainIp">
+                    <h2>selecione a categoria de Item(s)</h2>
+                    <ul id="ulCategoryShop">
+                        <li><a href="#" title="clique para ver todos os item(s) da loja." class="button buttonShop" id="allShopButton"><img src="../assets/imgs/tool.png" alt="icone todos"> todos</a></li>
+                        <li><a href="#" title="clique para ver a categoria de pokemons." class="button buttonShop" id="pokemonsShopButton"><img src="../assets/imgs/psyduck.png" alt="icone pokemon"> pokemons</a></li>
+                        <li><a href="#" title="clique para ver a categoria de caixas." class="button buttonShop" id="cratesShopButton"><img src="../assets/imgs/treasure-chest.png" alt="icone caixa"> caixas</a></li>
+                        <li><a href="#" title="clique para ver a categoria de item(s)" class="button buttonShop" id="itemsShopButton"><img src="../assets/imgs/sword.png" alt=""> item(s)</a></li>
+                        <li><a href="#" title="clique para ver a categoria de pokeluckys" class="button buttonShop" id="pokeluckyShopButton"><img src="../assets/imgs/lock.png" alt=""> pokeluckys</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="contentPlayers mainIp">
                     <h2>jogadores que mais jogam em nosso servidor</h2>
                     <div class="containerPlayers">
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- criando a pagina da loja -->
+        
+        <!-- criando a pagina wiki -->
         <div class="container">
             <main>
-
+                
             </main>
         </div>
 
@@ -57,7 +68,7 @@
             <div class="containerFooter">
                 <ul>
                     <p>acessibilidade</p>
-                    <a href="#"><img src="../assets/imgs/terms-and-conditions.png" alt="icone dos termos e condições">Termos e Condições</a>
+                    <a href="#" class="button"><img src="../assets/imgs/terms-and-conditions.png" alt="icone dos termos e condições">Termos e Condições</a>
                 </ul>
                 <ul>
                     <p>sobre nos</p>
@@ -67,12 +78,13 @@
                 </ul>
                 <ul>
                     <p>redes sociais</p>
-                    <a href="https://discord.gg/KxfpgSBKcE" target="_blank"><img src="../assets/imgs/discord.png" alt="icone do discord"> Discord</a>
+                    <a href="https://discord.gg/KxfpgSBKcE" target="_blank" class="button"><img src="../assets/imgs/discord.png" alt="icone do discord"> Discord</a>
                 </ul>
             </div>
-            <span>Copyright © PixelEmpire. Todos os Direitos Reservados.</span>
+            <span>Copyright © PixelEmpire. Sem qualquer vínculo com Mojang Studios, Microsoft ou The Pokémon Company.</span>
         </footer>
     </div>
     <script type="module" src="../assets/scripts/index.js"></script>
+    <script type="module" src="../assets/scripts/pageShop.js"></script>
 </body>
 </html>

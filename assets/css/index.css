@@ -28,12 +28,17 @@
 body {
     margin: 0;
     min-height: 100vh;
+    background-repeat: no-repeat;
     background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 400% 400%;
     animation: gradientShift 5s ease infinite;
     display: flex;
     justify-content: center;
     z-index: 0;
+}
+
+.container {
+    animation: slideDown 2s ease forwards;
 }
 
 #mainContainer .container {
@@ -93,6 +98,11 @@ nav ul {
     list-style-type: none;
 }
 
+nav a img {
+    width: 2rem;
+    height: auto;
+}
+
 nav li {
     display: flex;
     min-width: 25%;
@@ -100,7 +110,7 @@ nav li {
     justify-content: center;
 }
 
-nav a {
+.button {
     transition: all ease 1s;
     text-decoration: none;
     font-weight: bold;
@@ -113,24 +123,19 @@ nav a {
     box-shadow: 0 .25rem .25rem 0 rgba(0, 0, 0, 0.5);
     text-shadow: .15rem .15rem .18rem rgba(0, 0, 0, 0.8);
     background: rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
 }
 
-nav a:hover {
+.button:hover {
     position: relative;
     animation: hoverAnimation .25s ease forwards;
     transition: all ease .5s;
     border-radius: 1.5rem 1.5rem 0 0;
     background: rgb(0, 128, 0, .15);
     border-bottom: solid green .15rem;
-}
-
-#playButton {
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10rem;
-    font-size: 1.4rem;
 }
 
 h1,
@@ -263,9 +268,10 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: .75rem;
+    width: 60%;
 }
 
 .playerCard {
@@ -326,24 +332,12 @@ main {
     gap: .5rem;
 }
 
-.containerFooter ul a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .25rem;
-    text-decoration: none;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 1rem;
-    font-size: 1rem;
-    transition: all .5s ease;
-}
-
-.containerFooter ul a:hover {
-    background: rgba(0, 0, 0, 0.85);
-    transition: all .5s ease;
+.selectedButton {
     position: relative;
-    animation: hoverAnimation .25s ease forwards;
+    cursor: not-allowed;
+    transition: all ease .5s;
+    border-radius: 1.5rem 1.5rem 0 0;
+    background: rgb(0, 128, 0, .15);
     border-bottom: solid green .15rem;
 }
 
@@ -366,12 +360,54 @@ footer {
     gap: 2rem;
 }
 
+footer .button {
+    width: fit-content;
+}
+
+.containerShop {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a > * {
+    pointer-events: none; 
+}
+
 footer span {
     color: var(--font-color);
     font-weight: bold;
     background: rgba(0, 0, 0, 0.15);
     padding: 1rem;
     border-radius: 0 1rem 0 1rem;
+}
+
+#ulCategoryShop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#ulCategoryShop a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Minecraft2";
+}
+
+#ulCategoryShop img {
+    width: 2rem;
+    height: auto;
 }
 
 @keyframes fadeIn {
@@ -381,6 +417,22 @@ footer span {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        /* Fora da tela (para cima) */
+        opacity: 0;
+        /* Invisível no início */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Posição original */
+        opacity: 1;
+        /* Visível */
     }
 }
 
@@ -443,6 +495,11 @@ footer span {
 }
 
 @media (max-width: 768px) {
+
+    nav ul {
+        gap: .5rem;
+    }
+
     h1 {
         font-size: 2rem;
     }
