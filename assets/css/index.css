@@ -31,7 +31,7 @@ body {
     background-repeat: no-repeat;
     background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 400% 400%;
-    animation: gradientShift 5s ease infinite;
+    animation: gradientShift 20s ease infinite;
     display: flex;
     justify-content: center;
     z-index: 0;
@@ -116,7 +116,7 @@ nav li {
     font-weight: bold;
     text-transform: uppercase;
     width: 100%;
-    height: fit-content;
+    height: 5rem;
     padding: 1.25rem;
     text-align: center;
     border-radius: 50rem;
@@ -130,12 +130,15 @@ nav li {
 }
 
 .button:hover {
-    position: relative;
-    animation: hoverAnimation .25s ease forwards;
     transition: all ease .5s;
     border-radius: 1.5rem 1.5rem 0 0;
     background: rgb(0, 128, 0, .15);
     border-bottom: solid green .15rem;
+}
+
+.button:hover img {
+    position: relative;
+    animation: hoverAnimation .25s ease forwards;
 }
 
 h1,
@@ -386,28 +389,91 @@ footer span {
 
 #ulCategoryShop {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
     list-style-type: none;
     gap: 1rem;
-    width: 100%;
-    flex-wrap: wrap;
+    padding: 1rem;
+    width: fit-content;
+    height: 100vh;
 }
 
-#ulCategoryShop a {
+.buttonShop {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: .25rem;
-    font-size: 2.5rem;
+    gap: .5rem;
     text-transform: uppercase;
     text-decoration: none;
+    justify-content: start;
+    width: fit-content;
+    transition: all 1s ease;
+}
+
+.textCategoryShop {
     font-family: "Minecraft2";
+    font-size: 2.5rem;
+    width: 100%;
+    display: none;
+}
+
+#ulCategoryShop li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
 }
 
 #ulCategoryShop img {
     width: 2rem;
     height: auto;
+}
+
+.buttonShop:hover .textCategoryShop {
+    display: unset;
+    transition: all .5s ease;
+}
+
+.containerShop_cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.containerCards {
+    width: 100%;
+    height: 100vh;
+    min-height: 50rem;
+    background: rgba(0,0,0,.5);
+}
+
+#menuShopShowing {
+    align-self: self-start;
+    padding: 1rem;
+    background-color: rgb(5, 114, 114);
+}
+
+.menuShowing {
+    width: 100%;
+    animation: widthRight .8s ease forwards;
+    transition: all .5s ease forwards;
+}
+
+.hidden {
+    display: none;
+}
+
+.subcategorysShop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    background-color: rgb(175, 55, 0, .6);
+    padding: 1rem;
 }
 
 @keyframes fadeIn {
@@ -420,19 +486,24 @@ footer span {
     }
 }
 
+@keyframes widthRight {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
 @keyframes slideDown {
     0% {
         transform: translateY(-100%);
-        /* Fora da tela (para cima) */
         opacity: 0;
-        /* Invisível no início */
     }
 
     100% {
         transform: translateY(0);
-        /* Posição original */
         opacity: 1;
-        /* Visível */
     }
 }
 
@@ -543,5 +614,19 @@ footer span {
 
     .containerFooter ul {
         width: 100%;
+    }
+
+    #ulCategoryShop {
+        padding: .25rem;
+        gap: .25rem;
+    }
+
+    #ulCategoryShop img {
+        width: 1rem;
+        height: auto;
+    }
+
+    .textCategoryShop {
+        font-size: 1.5rem;
     }
 }
