@@ -15,8 +15,10 @@
             <nav>
                 <h1 class="titleHeader">pixelempire</h1>
                 <ul>
-                    <li><a href="#" id="wikiButton" class="button" title="selecionar a página sobre"><img src="../assets/imgs/pokemon-go.png" alt=""> wiki</a></li>
-                    <li><a href="#" id="shopButton" class="button" title="selecionar a página jogar"><img src="../assets/imgs/pokeball.png" alt=""> loja</a></li>
+                    <li><a href="#" id="wikiButton" class="button" title="selecionar a página sobre"><img
+                                src="../assets/imgs/pokemon-go.png" alt=""> wiki</a></li>
+                    <li><a href="#" id="shopButton" class="button" title="selecionar a página jogar"><img
+                                src="../assets/imgs/pokeball.png" alt=""> loja</a></li>
                 </ul>
             </nav>
         </header>
@@ -30,7 +32,8 @@
                         <a href="#" title="clique aqui para copiar o ip!" id="buttonIp">
                             <p>IP: jogar.pixelempire.com</p><img src="../assets/imgs/copy2.png" alt="">
                         </a>
-                        <span><span class="spanBold">OBS:</span> É necessário possuir a versão <span class="spanBold">8.4.3
+                        <span><span class="spanBold">OBS:</span> É necessário possuir a versão <span
+                                class="spanBold">8.4.3
                                 do
                                 Mod Pixelmon Reforged</span> para jogar em nosso servidor!</span>
                     </h2>
@@ -38,14 +41,20 @@
             </div>
             <div>
                 <div class="containerShop mainIp">
-                    <h2>selecione a categoria de Item(s)</h2>
+                    <h2 id="categorySelectedText">selecione a categoria de Item(s)</h2>
                     <div class="containerShop_cards">
                         <ul id="ulCategoryShop">
                             <a href="#" id="menuShopShowing"><img src="../assets/imgs/barra-de-menu.png" alt=""></a>
-                            <li class="liShop" id="allShopButtonLi"><a href="#" title="clique para ver todos os item(s) da loja." class="button buttonShop" id="allShopButton"><img src="../assets/imgs/tool.png" alt="icone todos"> <p class="textCategoryShop">todos</p></a></li>
+                            <li class="liShop" id="allShopButtonLi"><a href="#"
+                                    title="clique para ver todos os item(s) da loja." class="button buttonShop"
+                                    id="allShopButton"><img src="../assets/imgs/tool.png" alt="icone todos">
+                                    <p class="textCategoryShop">todos</p>
+                                </a></li>
                         </ul>
                         <div class="containerCards">
-    
+                            <div id="containerItemViewers">
+                                <!--gerado com script-->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,11 +67,11 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- criando a pagina wiki -->
         <div class="container">
             <main>
-                
+
             </main>
         </div>
 
@@ -70,23 +79,34 @@
             <div class="containerFooter">
                 <ul>
                     <p>acessibilidade</p>
-                    <a href="#" class="button"><img src="../assets/imgs/terms-and-conditions.png" alt="icone dos termos e condições">Termos e Condições</a>
+                    <a href="#" class="button"><img src="../assets/imgs/terms-and-conditions.png"
+                            alt="icone dos termos e condições">Termos e Condições</a>
                 </ul>
                 <ul>
                     <p>sobre nos</p>
                     <article>
-                        Criamos nosso servidor de Pixelmon em 2024 com um grande investimento em infraestrutura e desenvolvimento, com o objetivo de inovar a comunidade e oferecer uma experiência de jogo única. Focamos em melhorar a jogabilidade, trazendo novas mecânicas, eventos emocionantes e uma otimização que garante uma experiência fluida e sem interrupções. Nossa missão é criar um ambiente divertido e acolhedor para todos, onde cada jogador possa aproveitar ao máximo, com desafios e surpresas constantes. Estamos comprometidos em transformar o servidor em um espaço onde todos possam se divertir e se conectar, proporcionando uma experiência de Pixelmon inesquecível.
+                        Criamos nosso servidor de Pixelmon em 2024 com um grande investimento em infraestrutura e
+                        desenvolvimento, com o objetivo de inovar a comunidade e oferecer uma experiência de jogo única.
+                        Focamos em melhorar a jogabilidade, trazendo novas mecânicas, eventos emocionantes e uma
+                        otimização que garante uma experiência fluida e sem interrupções. Nossa missão é criar um
+                        ambiente divertido e acolhedor para todos, onde cada jogador possa aproveitar ao máximo, com
+                        desafios e surpresas constantes. Estamos comprometidos em transformar o servidor em um espaço
+                        onde todos possam se divertir e se conectar, proporcionando uma experiência de Pixelmon
+                        inesquecível.
                     </article>
                 </ul>
                 <ul>
                     <p>redes sociais</p>
-                    <a href="https://discord.gg/KxfpgSBKcE" target="_blank" class="button"><img src="../assets/imgs/discord.png" alt="icone do discord"> Discord</a>
+                    <a href="https://discord.gg/KxfpgSBKcE" target="_blank" class="button"><img
+                            src="../assets/imgs/discord.png" alt="icone do discord"> Discord</a>
                 </ul>
             </div>
-            <span>Copyright © PixelEmpire. Sem qualquer vínculo com Mojang Studios, Microsoft ou The Pokémon Company.</span>
+            <span>Copyright © PixelEmpire. Sem qualquer vínculo com Mojang Studios, Microsoft ou The Pokémon
+                Company.</span>
         </footer>
     </div>
     <script type="module" src="../assets/scripts/index.js"></script>
     <script type="module" src="../assets/scripts/pageShop.js"></script>
 </body>
+
 </html>
