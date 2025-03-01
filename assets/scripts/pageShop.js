@@ -1,4 +1,4 @@
-let config, categorys;
+export let config, categorys;
 let menuIsShowing = false;
 document.addEventListener("DOMContentLoaded", async (e) => {
 
@@ -113,8 +113,8 @@ document.addEventListener("DOMContentLoaded", async (e) => {
                             }
                         }
                         if (div) {
+                            a.classList.add("selectedButton");
                             if (!menuIsShowing) {
-                                a.classList.add("selectedButton");
                                 const p = a.querySelector(".textCategoryShop");
                                 p.style.display = "unset";
                             }
@@ -129,8 +129,8 @@ document.addEventListener("DOMContentLoaded", async (e) => {
                         target = document.getElementById(target.id);
                         const elements = target.getElementsByClassName("subcategorysShop");
                         if (elements.length > 0) {
+                            a.classList.remove("selectedButton");
                             if (!menuIsShowing) {
-                                a.classList.remove("selectedButton");
                                 const p = a.querySelector(".textCategoryShop");
                                 p.style = undefined;
                             }
@@ -208,7 +208,7 @@ function scrollToElement(element) {
     });
 }
 
-function formatValue(value) {
+export function formatValue(value) {
     const formattedAmount = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',

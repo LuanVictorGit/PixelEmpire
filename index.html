@@ -80,7 +80,7 @@
                 <ul>
                     <p>acessibilidade</p>
                     <a href="#" class="button"><img src="../assets/imgs/terms-and-conditions.png"
-                            alt="icone dos termos e condições">Termos e Condições</a>
+                            alt="icone dos termos e condições" id="terms">Termos e Condições</a>
                 </ul>
                 <ul>
                     <p>sobre nos</p>
@@ -105,8 +105,55 @@
                 Company.</span>
         </footer>
     </div>
+
+    <!-- definindo a sobreposição do menu de compra -->
+    <div id="containerMenuBuy" style="display: none;">
+        <div class="containerSobreposition">
+            <div class="containerImgClose">
+                <h1>confirmando a compra</h1>
+                <a href="#" class="closeMenu"><img src="../assets/imgs/close-icon.png" alt="close menu"></a>
+            </div>
+            <div class="containerProductInfoBuy">
+                <div class="product-info">
+                    <h2>Detalhes do Produto</h2>
+                    <p class="product-name">nome produto</p>
+                    <p class="price"><span>***</span></p>
+                    <img src="../assets/imgs/image.png" alt="imagem do produto">
+                </div>
+                <form id="formBuy">
+                    <div class="inputMenuBuy">
+                        <label for="nick">nick <span>*</span></label>
+                        <input type="text" maxlength="30" placeholder="Digite o seu nick aqui" id="nick">
+                    </div>
+                    <div class="inputMenuBuy">
+                        <label for="quantity">quantidade <span>*</span></label>
+                        <input type="number" max="10" min="1" placeholder="Quantidade" id="quantity">
+                    </div>
+                    <button id="confirmBuy">Comprar</button>
+                    <article class="observationMenuBuy">
+                        <strong>OBS:</strong> Ao comprar o produto, você concorda automaticamente com nossos <a
+                            href="#terms" id="termsMenuBuy">termos e condições</a>. Após o pagamento, você deverá entrar
+                        em nosso servidor com
+                        o nick selecionado e executar o comando <span>/CaixaPostal</span> para verificar o status do
+                        pagamento e, consequentemente, resgatar suas compras, caso aprovado.
+                    </article>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- definindo a sobreposição dos termos de compra -->
+    <div id="containerTerms" style="display: none;">
+        <div class="containerSobreposition">
+            <div class="containerImgClose">
+                <a href="#" class="closeMenu"><img src="../assets/imgs/close-icon.png" alt="close menu"></a>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="../assets/scripts/index.js"></script>
     <script type="module" src="../assets/scripts/pageShop.js"></script>
+    <script type="module" src="../assets/scripts/scriptMenuBuy.js"></script>
 </body>
 
 </html>
