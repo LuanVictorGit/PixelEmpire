@@ -88,9 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             const json = (await response.json()).response;
             const name = String(config["items"][selectedItemID]["title"]).toUpperCase();
-            const pricePix = json["transaction_amount"];
-            const pixKey = json["point_of_interaction"]["transaction_data"]["qr_code"];
-            const qrcode64 = json["point_of_interaction"]["transaction_data"]["qr_code_base64"];
+            const pricePix = json["transactionAmount"];
+            const pixKey = json["pointOfInteraction"]["transactionData"]["qrCode"];
+            const qrcode64 = json["pointOfInteraction"]["transactionData"]["qrCodeBase64"];
             const htmlContainerProductInfoBuy = `
             <div class="payment-container">
                 <h1>Realizando o pagamento da compra</h1>
