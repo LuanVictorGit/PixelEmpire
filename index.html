@@ -71,7 +71,39 @@
         <!-- criando a pagina wiki -->
         <div class="container">
             <main>
+                <div class="containerButtonsWiki">
+                    <div class="buttons_wiki">
+                        <a href="#" id="breedWiki" title="clique para ver sobre breeds"
+                            class="button buttonWiki selectedButtonWiki">breed</a>
+                        <a href="#" id="terrenosWiki" title="clique para ver sobre terrenos."
+                            class="button buttonWiki">terrenos</a>
+                        <a href="#" id="caixasWiki" title="clique para ver sobre as caixas."
+                            class="button buttonWiki">caixas</a>
+                        <a href="#" id="pokeluckysWiki" title="clique para ver sobre as pokeluckys"
+                            class="button buttonWiki">pokeluckys</a>
+                    </div>
+                    <div class="containerContentWiki">
+                        <!--container dos breeds-->
+                        <div id="containerBreeds" style="display: unset;">
+                            aaa
+                        </div>
 
+                        <!--container dos terrenos-->
+                        <div id="containerTerrenos" style="display: none;">
+                            bbb
+                        </div>
+
+                        <!--container dos caixas-->
+                        <div id="containerCaixas" style="display: none;">
+                           ccc
+                        </div>
+
+                        <!--container dos pokeluckys-->
+                        <div id="containerPokeluckys" style="display: none;">
+                            ddd
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
 
@@ -111,7 +143,8 @@
         <div class="containerSobreposition">
             <div class="containerImgClose">
                 <h1>confirmando a compra</h1>
-                <a href="#" title="clique para fechar." class="closeMenu"><img src="../assets/imgs/close-icon.png" alt="close menu"></a>
+                <a href="#" title="clique para fechar." class="closeMenu"><img src="../assets/imgs/close-icon.png"
+                        alt="close menu"></a>
             </div>
             <div class="containerProductInfoBuy">
                 <div class="product-info">
@@ -131,8 +164,9 @@
                     </div>
                     <button id="confirmBuy">Comprar</button>
                     <article class="observationMenuBuy">
-                        <strong>OBS:</strong> Ao comprar o produto, você concorda automaticamente com nossos <a
-                            href="#" id="termsMenuBuy" class="button_term">termos e condições</a>. Após o pagamento, você deverá entrar
+                        <strong>OBS:</strong> Ao comprar o produto, você concorda automaticamente com nossos <a href="#"
+                            id="termsMenuBuy" class="button_term">termos e condições</a>. Após o pagamento, você deverá
+                        entrar
                         em nosso servidor com
                         o nick selecionado e executar o comando <span>/CaixaPostal</span> para verificar o status do
                         pagamento e, consequentemente, resgatar suas compras, caso aprovado.
@@ -147,25 +181,45 @@
         <div class="containerSobreposition">
             <div class="containerImgClose">
                 <h1>termos de uso pokehype</h1>
-                <a href="#" title="clique para fechar." class="closeMenu"><img src="../assets/imgs/close-icon.png" alt="close menu"></a>
+                <a href="#" title="clique para fechar." class="closeMenu"><img src="../assets/imgs/close-icon.png"
+                        alt="close menu"></a>
             </div>
-            <div>
+            <div class="containerTermsArticles">
                 <h2>Política de Compras e Doações</h2>
                 <article>
                     <h3>1. Natureza dos Pagamentos</h3>
-                    Os pagamentos realizados no site ou dentro do servidor são caracterizados como doações de uso imediato. Ao efetuar uma doação, o doador entende e concorda que esta é uma contribuição voluntária para manutenção e melhoria do servidor, sem vínculo contratual de devolução ou reembolso de valores.
+                    Os pagamentos realizados no site ou dentro do servidor são caracterizados <span>como doações</span>
+                    de uso imediato. Ao efetuar uma doação, o doador entende e concorda que esta é uma contribuição
+                    voluntária para manutenção e melhoria do servidor, sem vínculo contratual de devolução ou reembolso
+                    de valores.
                 </article>
                 <article>
                     <h3>2. Responsabilidade do Cliente</h3>
-                    O servidor PokeHype não se responsabiliza por informações incorretas fornecidas no ato da compra, como nome de usuário, quantidade de itens selecionados ou outros dados inseridos pelo doador. É de responsabilidade exclusiva do doador garantir que todas as informações estejam corretas antes de finalizar a transação.
+                    O servidor PokeHype não se responsabiliza por informações incorretas fornecidas no ato da compra,
+                    como nome de usuário, quantidade de itens selecionados ou outros dados inseridos pelo doador. É de
+                    responsabilidade exclusiva do doador <span>garantir que todas as informações estejam corretas</span>
+                    antes de finalizar a transação.
+                </article>
+                <article>
+                    <h3>3. Reclamações e Suporte</h3>
+                    Em caso de erro durante o processo de compra, é possível solicitar suporte enviando um e-mail
+                    <span><a href="mailto:pokehype@outlook.com">clicando aqui</a></span>. O prazo máximo para o envio da
+                    solicitação é de <span>7 (sete) dias</span> corridos após a data da compra.
+                    Após este período, reclamações e pedidos de suporte não serão analisados ou atendidos.
+                </article>
+                <article>
+                    <h3>4. Aceitação dos Termos</h2>
+                        Ao realizar uma doação ou compra por meio do site ou servidor, o doador <span>declara estar
+                            ciente</span> e de acordo com todos os termos estabelecidos nesta política.
                 </article>
             </div>
         </div>
     </div>
 
-    <script type="module" src="../assets/scripts/index.js"></script>
-    <script type="module" src="../assets/scripts/pageShop.js"></script>
-    <script type="module" src="../assets/scripts/scriptMenuBuy.js"></script>
+    <script type="module" src="./assets/scripts/index.js"></script>
+    <script type="module" src="./assets/scripts/pageShop.js"></script>
+    <script type="module" src="./assets/scripts/scriptMenuBuy.js"></script>
+    <script type="module" src="./assets/scripts/wiki.js"></script>
 </body>
 
 </html>

@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
                 default:
                     break;
             }
-
+            window.scrollTo(0,0);
             return;
         }
         if (e.target.id === "buttonIp") {

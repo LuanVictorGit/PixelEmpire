@@ -33,6 +33,8 @@ body {
     animation: gradientShift 25s ease infinite;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     z-index: 0;
 }
 
@@ -342,6 +344,15 @@ main {
 }
 
 .selectedButton {
+    position: relative;
+    cursor: not-allowed;
+    transition: all ease .5s;
+    border-radius: 1.5rem 1.5rem 0 0;
+    background: rgb(0, 128, 0, .15);
+    border-bottom: solid green .15rem;
+}
+
+.selectedButtonWiki {
     position: relative;
     cursor: not-allowed;
     transition: all ease .5s;
@@ -746,6 +757,7 @@ footer span {
     font-size: 1rem;
     color: #333;
     text-align: justify;
+    letter-spacing: .05rem;
     line-height: 1.25rem;
 }
 
@@ -855,23 +867,6 @@ footer span {
     font-size: 1.5rem;
 }
 
-< !DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pagamento via Pix</title><style>* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f9;
-    display: flex;
-    flex-direction: column;
-}
-
 .payment-container {
     display: flex;
     flex-direction: column;
@@ -940,6 +935,81 @@ body {
 
 .copy-button:hover {
     background-color: #0056b3;
+}
+
+.containerTermsArticles {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 2rem;
+    justify-content: center;
+    align-items: left;
+    animation: slideDown 3s ease forwards;
+}
+
+.containerTermsArticles h2 {
+    font-size: 2rem;
+    color: #3f3f3f;
+    text-shadow: none;
+    border-left: solid .35rem;
+    padding: .5rem;
+}
+
+.containerTermsArticles h3 {
+    color: #3f3f3f;
+}
+
+.containerTermsArticles article {
+    color: #575757;
+    width: 80%;
+    text-align: justify;
+}
+
+.containerTermsArticles span, .containerTermsArticles a , .containerTermsArticles article {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 1.05rem;
+    color: #575757;
+}
+
+.containerTermsArticles span {
+    color: #3f3f3f;
+    font-weight: bold;
+}
+
+.containerTermsArticles a {
+    color: #1976d2;
+}
+
+.containerButtonsWiki {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    padding: 5rem;
+    gap: 2rem;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.containerContentWiki {
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.buttons_wiki {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.buttons_wiki a {
+    width: 20rem;
 }
 
 @keyframes spin {
