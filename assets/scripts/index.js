@@ -3,6 +3,11 @@ let selectedButton;
 
 document.addEventListener("DOMContentLoaded", async (e) => {
     document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("button_term")) { // clicando nos termos de uso
+            e.preventDefault();
+            executeTerms();
+            return;
+        }
         if ((e.target.id === "wikiButton" ||
             e.target.id === "shopButton") && e.target !== selectedButton) {
             e.preventDefault();
@@ -79,4 +84,9 @@ async function executeListPlayers(element) {
         // Aumenta o tempo da animação gradualmente
         if (seconds < 3) seconds += 0.25;
     }
+}
+
+function executeTerms() {
+    let containerTerms = document.getElementById("containerTerms");
+    containerTerms.style = undefined;
 }

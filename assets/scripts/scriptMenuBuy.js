@@ -12,16 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const containerMenuBuy = document.getElementById("containerMenuBuy");
             const containerTerms = document.getElementById("containerTerms");
-            if (containerMenuBuy) {
-                containerMenuBuy.style.display = "none";
+            if (containerTerms && !containerTerms.style.display) {
+                containerTerms.style.display = "none";
                 return;
             }
-            if (containerTerms) {
-                containerTerms.style.display = "none";
+            if (containerMenuBuy && !containerMenuBuy.style.display) {
+                containerMenuBuy.style.display = "none";
             }
             return;
         }
-        if (target.closest(".containerViewer")) {
+        if (target.closest(".containerViewer")) { // evento de clicar no card.
             e.preventDefault();
 
             document.getElementsByClassName("containerProductInfoBuy")[0].innerHTML = htmlContainerProductInfoBuyDefault;
@@ -57,11 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Coloque o seu nick antes de confirmar a compra!");
                 return;
             }
-            const quantity = Number(document.getElementById("quantity").value);
+            let nickValue = sanitizeInput(nick.value.trim());
+            let quantity = Number(document.getElementById("quantity").value);
+            quantity = quantity < 0 ? 1 : quantity > 10 ? 10 : quantity;
             const containerProductInfoBuy = document.getElementsByClassName("containerProductInfoBuy")[0];
             containerProductInfoBuy.innerHTML = `<div style="
-    width: 15rem;
-    height: 15rem;
+    width: 7rem;
+    height: 7rem;
     border: 5px solid #f3f3f3;
     border-top: 5px solid #3498db;
     border-radius: 50%;
@@ -76,10 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    nick: nick.value.trim(),
+                    nick: nickValue,
                     title: String(config["items"][selectedItemID]["title"]),
                     quantity: quantity,
-                    unit_price: Number(config["items"][selectedItemID]["price"])
+                    unit_price: Number(config["items"][selectedItemID]["price"]),
+                    selectedItemID: selectedItemID
                 })
             });
             if (!response.ok) {
@@ -106,14 +109,14 @@ document.addEventListener("DOMContentLoaded", () => {
             containerProductInfoBuy.innerHTML = htmlContainerProductInfoBuy;
             return;
         }
-        if (target.id === "termsMenuBuy") {
-            e.preventDefault();
-            document.getElementsByClassName("closeMenu")[0].click(); // fechando o menu
-        }
     });
 
     document.addEventListener("input", (e) => {
         const target = e.target;
+        if (target.id === "nick"){
+            target.value = sanitizeInput(target.value);
+            return;
+        }
         if (target.id !== "quantity") return;
         let value = target.value;
         value = value.replace(/[^\d]/g, '');
@@ -133,3 +136,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+function sanitizeInput(input) {
+    // Remove tags HTML
+    input = input.replace(/<[^>]*>?/gm, '');
+
+    // Permite letras, números, espaços, underscores e pontos
+    input = input.replace(/[^a-zA-Z0-9\s_\.]/g, '');
+
+    // Remove espaços em branco no início e no final (trim)
+    input = input.trim();
+
+    // Remove espaços em branco extras no meio (opcional)
+    input = input.replace(/\s+/g, ' ');
+
+    return input;
+}
