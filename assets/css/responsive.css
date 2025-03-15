@@ -1,0 +1,265 @@
+/* responsive.css */
+
+/* Estilos para telas menores que 1200px */
+@media (max-width: 1200px) {
+    .containerBannner {
+        width: 20rem;
+    }
+
+    .containerPlayers {
+        width: 80%;
+    }
+
+    .containerViewer {
+        width: 20rem;
+        height: 25rem;
+    }
+
+    .containerShop_cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .containerCards {
+        min-height: 40rem;
+    }
+
+    .containerProductInfoBuy {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .containerIFrame iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilos para telas menores que 992px */
+@media (max-width: 992px) {
+    header {
+        height: 10rem;
+        padding: 1rem;
+    }
+
+    .titleHeader {
+        font-size: 3rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .button {
+        height: 4rem;
+        font-size: 1rem;
+    }
+
+    .mainIp {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .containerBannner {
+        width: 18rem;
+    }
+
+    .containerViewer {
+        width: 18rem;
+        height: 22rem;
+    }
+
+    .containerFooter {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .containerFooter ul {
+        width: 100%;
+    }
+
+    .containerShop {
+        padding: 0.5rem;
+    }
+
+    .containerTermsArticles {
+        width: 90%;
+    }
+
+    .containerButtonsWiki {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .buttons_wiki a {
+        width: 100%;
+    }
+}
+
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .mainIp h2 {
+        font-size: 1.8rem;
+    }
+
+    .containerBannner {
+        width: 15rem;
+    }
+
+    .containerViewer {
+        width: 15rem;
+        height: 20rem;
+    }
+
+    .containerCards {
+        min-height: 35rem;
+    }
+
+    .containerSobreposition {
+        width: 80%;
+    }
+
+    .containerIFrame {
+        padding: 1rem;
+    }
+
+    .containerIFrame iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .containerContentWiki {
+        padding: 1rem;
+    }
+
+    .containerSelectedWiki h2 {
+        font-size: 1.5rem;
+    }
+
+    .containerSelectedWiki h3 {
+        font-size: 1.2rem;
+    }
+
+    .containerSelectedWiki h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para telas menores que 576px */
+@media (max-width: 576px) {
+    header {
+        height: 8rem;
+        padding: 0.5rem;
+    }
+
+    .titleHeader {
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .button {
+        height: 3.5rem;
+        font-size: 0.9rem;
+    }
+
+    .containerBannner {
+        width: 12rem;
+    }
+
+    .containerViewer {
+        width: 12rem;
+        height: 18rem;
+    }
+
+    .containerCards {
+        min-height: 30rem;
+    }
+
+    .containerSobreposition {
+        width: 90%;
+    }
+
+    .containerIFrame {
+        padding: 0.5rem;
+    }
+
+    .containerSelectedWiki h2 {
+        font-size: 1.2rem;
+    }
+
+    .containerSelectedWiki h3 {
+        font-size: 1rem;
+    }
+
+    .containerSelectedWiki h4 {
+        font-size: 0.9rem;
+    }
+
+    .containerSelectedWiki article, .containerSelectedWiki li, .containerSelectedWiki strong, .containerSelectedWiki p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para telas menores que 400px */
+@media (max-width: 400px) {
+    header {
+        height: 6rem;
+    }
+
+    .titleHeader {
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .button {
+        height: 3rem;
+        font-size: 0.8rem;
+    }
+
+    .containerBannner {
+        width: 10rem;
+    }
+
+    .containerViewer {
+        width: 10rem;
+        height: 15rem;
+    }
+
+    .containerCards {
+        min-height: 25rem;
+    }
+
+    .containerSobreposition {
+        width: 95%;
+    }
+
+    .containerIFrame {
+        padding: 0.25rem;
+    }
+
+    .containerSelectedWiki h2 {
+        font-size: 1rem;
+    }
+
+    .containerSelectedWiki h3 {
+        font-size: 0.9rem;
+    }
+
+    .containerSelectedWiki h4 {
+        font-size: 0.8rem;
+    }
+
+    .containerSelectedWiki article, .containerSelectedWiki li, .containerSelectedWiki strong, .containerSelectedWiki p {
+        font-size: 0.8rem;
+    }
+}
