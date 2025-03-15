@@ -70,7 +70,7 @@
 
         <!-- criando a pagina wiki -->
         <div class="container">
-            <main>
+            <main id="mainWiki">
                 <div class="containerButtonsWiki">
                     <div class="buttons_wiki">
                         <a href="#" id="breedWiki" title="clique para ver sobre breeds"
@@ -84,23 +84,149 @@
                     </div>
                     <div class="containerContentWiki">
                         <!--container dos breeds-->
-                        <div id="containerBreeds" style="display: unset;">
-                            aaa
+                        <div id="containerBreeds" class="containerSelectedWiki" style="display: unset;">
+                            <h2>Guia de Breeding (Prociar)</h2>
+                            <h3>1. Como Funciona o Breeding?</h3>
+                            <p>Para iniciar a reprodução, você precisará de:</p>
+                            <ul>
+                                <li><strong>Dois Pokémon compatíveis</strong> (mesmo Egg Group ou Ditto).</li>
+                                <li><strong>Um Ranch Block</strong> para criar o ambiente de breeding.</li>
+                            </ul>
+                            <p>Os Pokémon começarão a gerar um ovo quando atingirem 100% de compatibilidade, que pode
+                                ser aumentada com um ambiente adequado.</p>
+                            <h3>2. Criando um Ambiente Ideal</h3>
+                            <p>Cada tipo de Pokémon tem preferências específicas para o breeding:</p>
+                            <ul>
+                                <li><strong>Fogo:</strong> Blocos de lava ou netherrack.</li>
+                                <li><strong>Água:</strong> Blocos de água.</li>
+                                <li><strong>Grama:</strong> Folhas e grama alta.</li>
+                                <li> <strong>Pedra:</strong> Pedra e minério de carvão.</li>
+                            </ul>
+                            <p>Quanto mais blocos do tipo correto, mais rápido será o processo.</p>
+                            <h3>3. Fatores Importantes no Breeding</h3>
+                            <ul>
+                                <li><strong>IVs:</strong> Se um dos Pokémon tiver um Power Item (Power Anklet, Power
+                                    Bracer, etc.), ele
+                                    passará um IV específico para o filhote.</li>
+                                <li><strong>Natureza:</strong> O uso de Everstone em um dos pais garante que o
+                                    filhote herde a mesma
+                                    natureza.</li>
+                                <li><strong>Habilidade:</strong> Habilidades ocultas têm maior chance de serem
+                                    passadas pela mãe.
+                                    Pokébola: O filhote nascerá na mesma Pokébola da mãe (exceto Ditto).</li>
+                            </ul>
+                            <h3>4. Obtendo o Ovo</h3>
+                            <p>Depois que os Pokémon atingirem 100% de compatibilidade, um <strong>ovo</strong> será
+                                gerado no Ranch
+                                Block. Pegue o ovo e carregue-o no seu time até ele chocar, o que depende da
+                                <strong>distância
+                                    percorrida</strong> pelo jogador.
+                            </p>
+                            <div class="containerIFrame">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/6m03zac2pDU"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                                </iframe>
+                            </div>
                         </div>
 
                         <!--container dos terrenos-->
                         <div id="containerTerrenos" style="display: none;">
-                            bbb
+                            <h2>Guia de Terrenos PokeHype</h2>
+                            <h3>1. Para reivindicar um terreno:</h3>
+
+                            <p>Pegue uma Golden Shovel.</p>
+                            <ul>
+                                <li>Clique com o botão direito no canto inicial da área desejada.</li>
+                                <li>Clique novamente no canto oposto para definir a região.</li>
+                            </ul>
+                            <h3>2. Para permitir amigos no terreno:</h3>
+                            <ul>
+                                <li>Use <strong>/trust [jogador]</strong> para dar permissão total.</li>
+                                <li>Use <strong>/containertrust [jogador]</strong> para permitir abrir baús.</li>
+                                <li>Use <strong>/accesstrust [jogador]</strong> para permitir o uso de portas e botões.
+                                </li>
+                            </ul>
+                            <h3>3. Para remover um claim:</h3>
+                            <ul>
+                                <li>Use <strong>/abandonclaim</strong> para apagar sua reivindicação atual.</li>
+                            </ul>
+                            <div class="containerIFrame">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/kttiHVDuXtw"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                                </iframe>
+                            </div>
                         </div>
 
                         <!--container dos caixas-->
                         <div id="containerCaixas" style="display: none;">
-                           ccc
+                            <h2>Guia de Caixas PokeHype</h2>
+                            <h3>O Que São as Caixas?</h3>
+                            <p>As caixas são um sistema de recompensas onde os jogadores podem usar chaves especiais
+                                para obter prêmios aleatórios. Elas podem conter:</p>
+                            <ul>
+                                <li>Pokémon raros ou lendários</li>
+                                <li>Itens valiosos (TMs, Pokébolas, Held Items)</li>
+                                <li>Pontos de diversos tipos</li>
+                                <li>Dinheiro in-game</li>
+                                <li>Boosters de experiência ou EVs</li>
+                            </ul>
+                            <h3>Como Conseguir Caixas e Chaves?</h3>
+                            <p>Existem diversas maneiras de obter caixas e suas chaves:</p>
+
+                            <ul>
+                                <li>
+                                    <h4>1. Eventos do Servidor</h4>
+                                    <p>Os administradores organizam eventos especiais, como batalhas PvP, torneios e
+                                        caçadas de Pokémon, onde os vencedores recebem chaves para abrir as caixas.</p>
+                                </li>
+                                <li>
+                                    <h4>2. Loja do Servidor</h4>
+                                    <p>Os jogadores podem adquirir chaves ou caixas na loja do servidor usando dinheiro
+                                        in-game ou até mesmo por meio de doações para apoiar o servidor.</p>
+                                </li>
+                                <li>
+                                    <h4>3. Missões e Desafios</h4>
+                                    <p>Algumas caixas podem ser obtidas ao completar missões diárias, desafios semanais
+                                        ou ao capturar determinados Pokémon.</p>
+                                </li>
+                                <li>
+                                    <h4>4. Recompensas de Tempo Online</h4>
+                                    <p>Os jogadores mais ativos podem ganhar caixas como recompensa por tempo jogado no
+                                        servidor.</p>
+                                </li>
+                            </ul>
+
+                            <h3>Como Abrir as Caixas?</h3>
+                            <ul>
+                                <li>1. Obtenha uma chave</li>
+                                <li>2. Vá até a área de caixas no servidor</li>
+                                <li>3. Clique com a chave na caixa correspondente</li>
+                                <li>Receba sua recompensa!</li>
+                            </ul>
                         </div>
 
                         <!--container dos pokeluckys-->
                         <div id="containerPokeluckys" style="display: none;">
-                            ddd
+                            <h2>Guia das PokeLuckys PokeHype</h2>
+                            <h3>O Que São as PokéLuckys?</h3>
+                            <p>As PokéLuckys são blocos especiais que, ao serem ativados, liberam um prêmio aleatório.
+                                Esse prêmio pode ser um <strong>Pokémon Comum, Raro ou Épico</strong>.</p>
+                            <h3>Como Conseguir PokéLuckys?</h3>
+                            <p>Existem várias formas de obter PokéLuckys no servidor:</p>
+                            <ul>
+                                <li><strong>Eventos Especiais</strong> - Administradores podem distribuir PokéLuckys
+                                    como prêmios de eventos, torneios e desafios.</li>
+                                <li><strong>Loja do Servidor</strong> - Algumas versões das PokéLuckys podem ser
+                                    adquiridas na loja oficial do servidor.</li>
+                            </ul>
+                            <h3>Como Usar as PokéLuckys?</h3>
+                            <ul>
+                                <li>1. Pegue uma PokéLucky no inventário</li>
+                                <li>2. Coloque-a no chão (como um bloco)</li>
+                                <li>3. Quebre a PokéLucky e veja o que acontece!</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
