@@ -1016,7 +1016,8 @@ footer span {
 }
 
 .buttons_wiki a {
-    width: 20rem;
+    min-width: 20rem;
+    width: 100%;
 }
 
 #mainWiki {
