@@ -62,27 +62,31 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 });
 
 async function executeListPlayers(element) {
-    const html = `
+
+    let result = await fetch("http://localhost:3000/topPlayers");
+    if (!result) return;
+
+    const data = await result.json();
+    if (!data) return;
+    if (data.length === 0) return;
+
+    let seconds = 0.5;
+    for(let obj of data) {
+        let [nick, time] = obj.split('>');
+        const html = `
         <div class="playerCard">
-            <h2>lHawk_</h2>
-            <p>10.000 pixelcoins</p>
-            <img loading="lazy" src="https://crafatar.com/renders/body/ee0138d1-9707-4ee3-8095-1e96db15c454" alt="imagem player">
+            <h2>${nick}</h2>
+            <p>${time}</p>
+            <img loading="lazy" src="https://mc-heads.net/body/${nick}" alt="imagem player">
         </div>
-    `;
-    let seconds = 0.25;
-    for (let i = 0; i < 10; i++) {
-        // Adiciona o novo playerCard ao container sem sobrescrever o conteúdo
+        `;
         element.insertAdjacentHTML("beforeend", html);
 
-        // Seleciona o novo playerCard
         const elementPlayers = document.getElementsByClassName("playerCard");
         const playerCard = elementPlayers[elementPlayers.length - 1];
-
-        // Aplica a animação ao playerCard
         playerCard.style.animation = `slideUp ${seconds}s ease forwards, fadeIn 3s ease forwards`;
 
-        // Aumenta o tempo da animação gradualmente
-        if (seconds < 3) seconds += 0.25;
+        if (seconds < 3) seconds += 0.5;
     }
 }
 
